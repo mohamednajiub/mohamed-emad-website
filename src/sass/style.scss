@@ -1,0 +1,25 @@
+/*
+Theme Name: julias
+Theme URI: http://start-solutions.net/julias
+Author: Mohamad Elbialy
+Author URI: http://start-solutions.net/
+Description: child theme of bakes and cakes
+Text Domain: julias
+Template: bakes-and-cakes
+*/
+
+// Import external files
+@import "../bower_components/susy/sass/_susy.scss";
+@import "../bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import "mixins/variables";
+@import "layout/layout";
+@import "base/resets";
+@import "base/base";
+@import "modules/header";
+@import "modules/front-page";
+@import "modules/copoun-modal";
+@import "modules/product-single";
+@import "modules/cart-page";
+@import "modules/checkout";
+@import "modules/contact-us";
+@import "modules/footer";
