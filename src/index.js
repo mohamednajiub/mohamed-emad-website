@@ -1,1 +1,2 @@
-alert('hello from webpack');
+// alert('hello from webpack');
+import "./scss/style.scss";
