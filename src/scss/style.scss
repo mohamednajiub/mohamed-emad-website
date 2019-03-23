@@ -9,3 +9,7 @@
 /* calling base files ============*/
 @import "base/resets";
 @import "base/base";
+/* calling mixins ============*/
+@import './mixins/variables';
+/* calling modules ============*/
+@import './modules/header';
