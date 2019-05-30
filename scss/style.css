@@ -127,8 +127,13 @@ header h3 {
   font-size: 20px;
 }
 
+.intro {
+  margin-top: 150px;
+  font-size: 20px;
+}
+
 footer {
-  margin-top: 200px;
+  margin-top: 20px;
 }
 
 footer ul li {
