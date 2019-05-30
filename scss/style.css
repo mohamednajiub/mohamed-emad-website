@@ -107,7 +107,7 @@ body > section {
 
 header {
   position: absolute;
-  top: 15%;
+  top: 10%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -117,5 +117,18 @@ header img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
+}
+
+footer {
+  margin-top: 200px;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+footer ul li a {
+  display: block;
+  padding: 20px 15px;
 }
 /*# sourceMappingURL=style.css.map */
