@@ -1,15 +1,16 @@
-/* style.scss */
-/* calling mixins files ============*/
-@import "mixins/variables";
-@import "mixins/transition";
+// /* style.scss */
+// /* calling mixins files ============*/
+// @import "mixins/variables";
+// @import "mixins/transition";
 
-/* calling layout ============*/
-@import "layout/layout";
+// /* calling layout ============*/
+// @import "layout/layout";
 
 /* calling base files ============*/
 @import "base/resets";
 @import "base/base";
-/* calling mixins ============*/
-@import './mixins/variables';
+// /* calling mixins ============*/
+// @import './mixins/variables';
 /* calling modules ============*/
+@import './modules/home';
 @import './modules/header';
