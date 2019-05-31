@@ -1,17 +1,33 @@
-header{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    img{
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
+header {
+    @media screen and (min-width: $mobile_portrait_min_width) and (max-width: $mobile_landscape_max_width) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        div{
+            h1 {
+                font-size: 18px
+            }
+            h3 {
+                font-size: 15px
+            }
+        }
     }
-    h1{
-        font-size: 30px
-    }
-    h3{
-        font-size: 20px
+
+    @media screen and (min-width: $small_tablet_min_width) {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+        h1 {
+            font-size: 30px
+        }
+        h3 {
+            font-size: 20px
+        }
     }
 }
