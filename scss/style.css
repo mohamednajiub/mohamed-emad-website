@@ -1,3 +1,5 @@
+/* calling layout ============*/
+/*break points*/
 /* calling base files ============*/
 *, *:before,
 *:after {
@@ -98,11 +100,23 @@ body {
 body > section {
   background-color: #fff;
   position: relative;
-  margin: 10% auto;
+  margin: 100px auto;
   padding: 20px;
-  width: 50%;
+  width: 90%;
   -webkit-box-shadow: 4px 6px 16px -2px rgba(0, 0, 0, 0.75);
   box-shadow: 4px 6px 16px -2px rgba(0, 0, 0, 0.75);
+}
+
+@media screen and (min-width: 690px) {
+  body > section {
+    max-width: 70%;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  body > section {
+    max-width: 50%;
+  }
 }
 
 header {
