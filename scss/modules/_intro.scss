@@ -1,4 +1,11 @@
-.intro{
-    margin-top: 150px;
-    font-size: 20px
+.intro {
+    margin: 20px auto;
+    font-size: 19px;
+    p{
+        margin-top: 20px
+    }
+    @media screen and (min-width: $small_tablet_min_width) {
+        margin-top: 150px;
+        font-size: 20px
+    }
 }

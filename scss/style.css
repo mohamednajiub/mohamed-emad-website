@@ -161,8 +161,19 @@ body > section {
 }
 
 .intro {
-  margin-top: 150px;
-  font-size: 20px;
+  margin: 20px auto;
+  font-size: 19px;
+}
+
+.intro p {
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 595px) {
+  .intro {
+    margin-top: 150px;
+    font-size: 20px;
+  }
 }
 
 footer {
