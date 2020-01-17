@@ -1,0 +1,11 @@
+header {
+  background-color: blue;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*# sourceMappingURL=main.css.map */
