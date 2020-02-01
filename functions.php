@@ -2,7 +2,7 @@
 
 function add_styles()
 {
-    wp_enqueue_style( 'normalize', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+    wp_enqueue_style( 'normalize', get_template_directory_uri().'/css/normalize.min.css');
     wp_enqueue_style('bootstrap_grid', get_template_directory_uri().'/css/bootstrap-grid.min.css');
     wp_enqueue_style('theme_main_styles', get_template_directory_uri().'/css/main.css');
 }
