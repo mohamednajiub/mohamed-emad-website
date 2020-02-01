@@ -13,9 +13,9 @@
 <nav>
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-md-3">
-                <a href="<?php echo site_url() ?>" title="Mohamed Najiub">
-                    <h1>Mohamed Najiub</h1>
+            <div class="col-md-3 brand">
+                <a href="<?php echo site_url(); ?>" title="Mohamed Najiub" class="brand--link">
+                    <h1 class="m-0">Mohamed Najiub</h1>
                     <span>Front-end/WordPress Developer</span>
                 </a>
             </div>

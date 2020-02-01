@@ -1,0 +1,17 @@
+nav {
+    .brand {
+
+        &--link{
+            color: $gray;
+            text-decoration: none;
+            text-align: center;
+            h1{
+                font-size: 2rem;
+            }
+            span{
+                display: block;
+                font-size: 0.75rem;
+            }
+        }
+    }
+}
