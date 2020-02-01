@@ -2,6 +2,7 @@
 
 function add_styles()
 {
+    wp_enqueue_style('bootstrap_grid', get_template_directory_uri().'/css/bootstrap-grid.min.css');
     wp_enqueue_style('theme_main_styles', get_template_directory_uri().'/css/main.css');
 }
 
