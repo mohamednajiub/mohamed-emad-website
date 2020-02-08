@@ -13,13 +13,13 @@
 <nav>
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-md-3 brand">
+            <div class="col-md-4 brand">
                 <a href="<?php echo site_url(); ?>" title="Mohamed Najiub" class="brand--link">
                     <h1 class="m-0">Mohamed Najiub</h1>
-                    <span>Front-end/WordPress Developer</span>
+                    <span>Front-end & WordPress Developer</span>
                 </a>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 navigation">
                 <ul class="d-flex justify-content-between">
                     <li><a href="#" title="about">About</a></li>
                     <li><a href="#" title="about">Portfolio</a></li>

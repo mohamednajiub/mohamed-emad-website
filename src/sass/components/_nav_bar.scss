@@ -1,16 +1,38 @@
 nav {
     .brand {
 
-        &--link{
+        &--link {
             color: $gray;
             text-decoration: none;
             text-align: center;
-            h1{
+            h1 {
                 font-size: 2rem;
+                font-family: Potra;
             }
-            span{
+            span {
                 display: block;
                 font-size: 0.75rem;
+            }
+        }
+    }
+    .navigation {
+        ul {
+            list-style-type: none;
+            li {
+                a{
+                    text-decoration: none;
+                    color: $primary--color;
+                    text-transform: uppercase;
+                    font-family: Potra;
+                    &:hover,
+                    &:focus,
+                    &:active{
+                        text-decoration: none;
+                        color: $primary--color;
+                        text-transform: uppercase;
+                        font-family: Potra;
+                    }
+                }
             }
         }
     }
