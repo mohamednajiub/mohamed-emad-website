@@ -4,7 +4,6 @@ nav {
         &--link {
             color: $gray;
             text-decoration: none;
-            text-align: center;
             h1 {
                 font-size: 2rem;
                 font-family: Potra;
@@ -13,6 +12,7 @@ nav {
                 display: block;
                 font-size: 1rem;
                 font-family: 'Moon Bold';
+                text-align: right
             }
         }
     }

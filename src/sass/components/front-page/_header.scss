@@ -1,0 +1,23 @@
+header {
+    .photo {
+        img {
+            max-width: 100%;
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+    }
+
+    .details {
+        h1 {
+            font-family: Potra;
+        }
+
+        p {
+            font-family: 'Moon Regular';
+            line-height: 1.5;
+            font-size: 1.5rem;
+        }
+
+    }
+}
