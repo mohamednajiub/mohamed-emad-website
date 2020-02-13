@@ -13,8 +13,8 @@
                     sharing the experience. is currently most passionate about office work.
                 </p>
                 <div>
-                    <a href=""></a>
-                    <a href=""></a>
+                    <a href="" class="btn btn--primary">Resume</a>
+                    <a href="" class="btn btn--default">contact </a>
                 </div>
             </div>
         </div>

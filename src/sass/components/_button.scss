@@ -1,0 +1,24 @@
+.btn {
+    display: inline-block;
+    font-family: 'Moon Regular';
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 1rem;
+    padding: 0.5rem 1.75rem;
+    border-radius: .25rem;
+    transition: all 0.5s ease-in-out;
+    text-decoration: none;
+    
+    &--default{
+        border: 1px solid $primary--color;
+        color: $primary--color;
+    }
+    &--primary{
+        background-color: $primary--color;
+        color: $white;
+        border: 1px solid transparent;
+    }
+}
