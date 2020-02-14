@@ -20,4 +20,10 @@
         </div>
     </div>
 </header>
+
+<section class="technologies">
+    <div class="container">
+        <h3>Techniques I know</h3>
+    </div>
+</section>
 <?php get_footer(); ?>
