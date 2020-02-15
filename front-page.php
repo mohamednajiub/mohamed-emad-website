@@ -29,10 +29,10 @@
     $technologies = new WP_Query($args);
     if ($technologies->have_posts()):
 ?>
-    <section class="technologies my-5 py-5">
+    <section class="technologies my-5 py-3">
         <div class="container">
             <h3 class="my-5">Techniques I know</h3>
-            <div class="technologies--container">
+            <div class="technologies--container my-3">
                 <?php
                     while ( $technologies->have_posts() ) :
                         $technologies->the_post();
