@@ -20,10 +20,33 @@
         </div>
     </div>
 </header>
-
-<section class="technologies">
-    <div class="container">
-        <h3>Techniques I know</h3>
-    </div>
-</section>
+<?php
+    $args = array(
+        'post_type' => 'technologies',
+        'post_status' => 'publish',
+        'orderby' => 'date'
+    );
+    $technologies = new WP_Query($args);
+    if ($technologies->have_posts()):
+?>
+    <section class="technologies my-5 py-5">
+        <div class="container">
+            <h3 class="my-5">Techniques I know</h3>
+            <div class="technologies--container">
+                <?php
+                    while ( $technologies->have_posts() ) :
+                        $technologies->the_post();
+                ?>      
+                    <img src="<?php the_post_thumbnail_url() ?>"
+                        alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true); ?>"
+                        title="<?php echo get_the_title(get_post_thumbnail_id()); ?>"
+                        class="col-md-2"
+                    />
+                <?php
+                    endwhile;    
+                ?>
+            </div>
+        </div>
+    </section>
+<?php endif; ?>
 <?php get_footer(); ?>
