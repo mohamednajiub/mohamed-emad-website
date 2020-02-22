@@ -20,7 +20,7 @@
                 </a>
             </div>
             <div class="col-md-6 navigation">
-                <ul class="d-flex flex-column flex-md-row  justify-content-between">
+                <ul class="d-flex flex-column flex-md-row  justify-content-between flex-wrap">
                     <li><a href="#" title="about">About</a></li>
                     <li><a href="#" title="about">Portfolio</a></li>
                     <li><a href="#" title="about">Blog</a></li>
