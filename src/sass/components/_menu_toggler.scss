@@ -8,7 +8,7 @@
     height: 30px;
     padding: 5px;
     border-radius: 5px;
-    background-color: $black;
+    border: 1px solid $black;
     
     .bar {
         width: 30px;
@@ -20,7 +20,7 @@
 
     &.open {
         justify-content: center !important;
-        position: relative;
+        position: fixed;
 
         .bar {
             &:first-child {

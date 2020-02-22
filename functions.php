@@ -10,7 +10,8 @@ function add_styles()
 
 function add_scripts()
 {
-    wp_enqueue_script('theme_main_script' );
+    wp_enqueue_script("jquery");
+    wp_enqueue_script('theme_main_script', get_template_directory_uri() . '/js/main.bundle.js' );
 }
 
 

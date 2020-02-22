@@ -20,14 +20,14 @@
                 </a>
             </div>
             <div class="col-md-6 navigation">
-                <ul class="d-none d-md-flex justify-content-between">
+                <ul class="d-flex flex-column flex-md-row  justify-content-between">
                     <li><a href="#" title="about">About</a></li>
                     <li><a href="#" title="about">Portfolio</a></li>
                     <li><a href="#" title="about">Blog</a></li>
                     <li><a href="#" title="about">Contact</a></li>
                 </ul>
             </div>
-            <div class="menu--toggler d-flex d-md-none flex-column justify-content-between">
+            <div class="menu--toggler d-flex d-md-none flex-column justify-content-between" id="menu_toggler">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
