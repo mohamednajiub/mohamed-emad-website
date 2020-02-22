@@ -36,6 +36,9 @@ nav {
                     }
                 }
             }
+            @media screen and (max-width: $bootstrap_small){
+                display: none;
+            }
         }
     }
 }
