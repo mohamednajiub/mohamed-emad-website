@@ -40,7 +40,7 @@
                     <img src="<?php the_post_thumbnail_url() ?>"
                         alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true); ?>"
                         title="<?php echo get_the_title(get_post_thumbnail_id()); ?>"
-                        class="col-md-2"
+                        class="col-6 col-md-3 col-lg-2 col-xl-1"
                     />
                 <?php
                     endwhile;    
