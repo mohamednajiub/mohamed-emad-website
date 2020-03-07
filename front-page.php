@@ -65,7 +65,7 @@
             <div class="wrapper">
                 <div class="timeline--area">
                     <div class="line--area"></div>
-                    <div class="experience--item" title="2008-02-14 20:00">
+                    <div class="experience--item active" title="2008-02-14 20:00">
                         <a href="#"  class="experience--details">
                             <h5 class="my-2">position</h5>
                             <div class="job--details">
