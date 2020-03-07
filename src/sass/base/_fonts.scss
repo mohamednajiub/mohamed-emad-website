@@ -17,3 +17,10 @@
     font-family: 'Moon Regular';
     src: url('../fonts/Moon2.0-Regular.otf');
 }
+
+@font-face {
+    font-family: 'Jost* Book';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Jost* Book'), url('../fonts/Jost400Book.woff') format('woff');
+}
