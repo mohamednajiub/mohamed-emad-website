@@ -61,25 +61,50 @@
 ?>
     <section class="experiences my-5 py-3">
         <div class="container">
-            <h3 class="my-5">Things I do</h3>
+            <h3 class="mt-5 mb-3">Things I do</h3>
             <div class="wrapper">
                 <div class="timeline--area">
                     <div class="line--area"></div>
-                    <div class="experience--item">
-                        <time datetime="2008-02-14 20:00">Valentines day</time>
-                        <div class="experience--details">
-                            <a href="#">
-                                <h5 class="my-2">position</h5>
-                                <div class="job--details">
-                                    <img src="" alt="" class="company--image">
-                                    <div class="job--timeline">
-                                        <time datetime="2008-02-14 20:00">start day</time>
-                                        <span>to</span>
-                                        <time datetime="2008-02-14 20:00">end day</time>
-                                    </div>
+                    <div class="experience--item" title="2008-02-14 20:00">
+                        <a href="#"  class="experience--details">
+                            <h5 class="my-2">position</h5>
+                            <div class="job--details">
+                                <img src="" alt="" class="company--image">
+                                <div class="job--timeline">
+                                    <time datetime="2008-02-14 20:00">start day</time>
+                                    <span>to</span>
+                                    <time datetime="2008-02-14 20:00">end day</time>
                                 </div>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="experience--item" title="2008-02-14 20:00">
+                        <a href="#"  class="experience--details">
+                            <h5 class="my-2">position</h5>
+                            <div class="job--details">
+                                <img src="" alt="" class="company--image">
+                                <div class="job--timeline">
+                                    <time datetime="2008-02-14 20:00">start day</time>
+                                    <span>to</span>
+                                    <time datetime="2008-02-14 20:00">end day</time>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="experience--item" title="2008-02-14 20:00">
+                        <a href="#"  class="experience--details">
+                            <h5 class="my-2">position</h5>
+                            <div class="job--details">
+                                <img src="" alt="" class="company--image">
+                                <div class="job--timeline">
+                                    <time datetime="2008-02-14 20:00">start day</time>
+                                    <span>to</span>
+                                    <time datetime="2008-02-14 20:00">end day</time>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
