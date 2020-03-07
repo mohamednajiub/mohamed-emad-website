@@ -1,0 +1,23 @@
+.experience--details {
+    &>a {
+        text-decoration: none;
+        border: 1px solid $primary--color;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        color: #001440;
+        h5{
+            font-family: jost;
+            text-transform: uppercase;
+            font-family: 1rem;
+        }
+        .job--details{
+            display: flex;
+            .job--timeline{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    }
+}

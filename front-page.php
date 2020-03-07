@@ -69,12 +69,14 @@
                         <time datetime="2008-02-14 20:00">Valentines day</time>
                         <div class="experience--details">
                             <a href="#">
-                                <h5>position</h5>
+                                <h5 class="my-2">position</h5>
                                 <div class="job--details">
                                     <img src="" alt="" class="company--image">
-                                    <time datetime="2008-02-14 20:00">start day</time>.
-                                    <span>to</span>
-                                    <time datetime="2008-02-14 20:00">end day</time>.
+                                    <div class="job--timeline">
+                                        <time datetime="2008-02-14 20:00">start day</time>
+                                        <span>to</span>
+                                        <time datetime="2008-02-14 20:00">end day</time>
+                                    </div>
                                 </div>
                             </a>
                         </div>
