@@ -51,32 +51,37 @@
 <?php endif; ?>
 
 <?php
-    $args = array(
-        'post_type' => 'experience',
-        'post_status' => 'publish',
-        'orderby' => 'date'
-    );
-    $experiences = new WP_Query($args);
-    if ($experiences->have_posts()):
+    // $args = array(
+    //     'post_type' => 'experience',
+    //     'post_status' => 'publish',
+    //     'orderby' => 'date'
+    // );
+    // $experiences = new WP_Query($args);
+    // if ($experiences->have_posts()):
 ?>
     <section class="experiences my-5 py-3">
         <div class="container">
-            <h3 class="my-5">Techniques I know</h3>
-            <div class="experiences--container my-3">
-                <?php
-                    while ( $experiences->have_posts() ) :
-                        $experiences->the_post();
-                ?>      
-                    <img src="<?php the_post_thumbnail_url() ?>"
-                        alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true); ?>"
-                        title="<?php echo get_the_title(get_post_thumbnail_id()); ?>"
-                        class="col-6 col-md-3 col-lg-2 col-xl-1"
-                    />
-                <?php
-                    endwhile;    
-                ?>
+            <h3 class="my-5">Things I do</h3>
+            <div class="wrapper">
+                <div class="timeline--area">
+                    <div class="line--area"></div>
+                    <div class="experience--item">
+                        <time datetime="2008-02-14 20:00">Valentines day</time>
+                        <div class="experience--details">
+                            <a href="#">
+                                <h5>position</h5>
+                                <div class="job--details">
+                                    <img src="" alt="" class="company--image">
+                                    <time datetime="2008-02-14 20:00">start day</time>.
+                                    <span>to</span>
+                                    <time datetime="2008-02-14 20:00">end day</time>.
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-<?php endif; ?>
+<?php // endif; ?>
 <?php get_footer(); ?>
