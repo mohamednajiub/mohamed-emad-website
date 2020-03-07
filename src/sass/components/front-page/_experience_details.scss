@@ -1,15 +1,16 @@
 .experience--details {
     &>a {
-        text-decoration: none;
         border: 1px solid $primary--color;
         padding: 10px;
         display: flex;
         flex-direction: column;
         color: #001440;
+        font-family: 'Jost* Book';
+        text-decoration: none;
+        width: max-content;
         h5{
-            font-family: 'Jost* Book';
             text-transform: uppercase;
-            font-size: 1rem;
+            font-size: 1.25rem;
         }
         .job--details{
             display: flex;

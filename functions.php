@@ -84,7 +84,7 @@ function theme_post_types(){
             'public' => true,
             'has_archive' => true,
             'menu_icon' => 'dashicons-id',
-            'supports' => array('title', 'excerpt', 'thumbnail'),
+            'supports' => array('title', 'editor', 'thumbnail'),
         )
     );
 }
