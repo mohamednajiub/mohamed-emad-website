@@ -33,7 +33,7 @@ function theme_features()
 
 function theme_post_types(){
     register_post_type( 'technologies',
-    // CPT Options
+    // technologies custom post type Options
         array(
             'labels' => array(
                 'menu_name' => 'Technologies',
@@ -48,8 +48,7 @@ function theme_post_types(){
                 'not_found' => 'No Technologies found in your search',
                 'all_items' => 'All Technologies',
                 'insert_into_item' => 'Insert in Technologies Post Type',
-                'uploaded_to_this_item' => 'Upload this to Technologies Post Type',
-                
+                'uploaded_to_this_item' => 'Upload this to Technologies Post Type',    
             ),
             'description' => 'Technogies is the skills that I Know',
             'show_in_rest' => true,
@@ -57,9 +56,63 @@ function theme_post_types(){
             'has_archive' => true,
             'menu_icon' => 'dashicons-dashboard',
             'supports' => array('title', 'excerpt', 'thumbnail'),
+            // the post type doesn't have single page
+            'publicly_queryable' => false
+        )
+    );
+
+
+    register_post_type( 'experience',
+    // experience custom post type Options
+        array(
+            'labels' => array(
+                'menu_name' => 'Experiences',
+                'name' => 'Experiences',
+                'singular_name' => 'Experience',
+                'add_new' => 'Add new Experience',
+                'add_new_item' => 'Add New Experience',
+                'edit_item' => 'Edit Experience',
+                'view_item' => 'View Experience',
+                'view_items' => 'View All Experiences',
+                'search_items' => 'Search in Experiences',
+                'not_found' => 'No Experiences found in your search',
+                'all_items' => 'All Experiences',
+                'insert_into_item' => 'Insert in Experiences Post Type',
+                'uploaded_to_this_item' => 'Upload this to Experiences Post Type',    
+            ),
+            'description' => 'Experiences is the all work experience that I worked on.',
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-id',
+            'supports' => array('title', 'excerpt', 'thumbnail'),
         )
     );
 }
+
+function mohamed_najiub_metabox() {
+
+	$cmb = new_cmb2_box( array(
+		'id'           => 'job_timeline',
+		'title'        => 'Job Timeline',
+        'object_types' => array( 'experience' ),
+        'context'      => 'advanced',
+        'priority'     => 'high'
+	) );
+
+	$cmb->add_field( array(
+        'name' => 'Start date',
+        'id'   => 'mn_job_start_date',
+        'type' => 'text_date'
+    ) );
+
+    $cmb->add_field( array(
+        'name' => 'End Date',
+        'id'   => 'mn_job_end_date',
+        'type' => 'text_date'
+    ) );
+
+}
+add_action( 'cmb2_admin_init', 'mohamed_najiub_metabox' );
 
 add_action("wp_enqueue_scripts", "add_styles");
 add_action("wp_enqueue_scripts", "add_scripts");

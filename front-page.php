@@ -49,4 +49,34 @@
         </div>
     </section>
 <?php endif; ?>
+
+<?php
+    $args = array(
+        'post_type' => 'experience',
+        'post_status' => 'publish',
+        'orderby' => 'date'
+    );
+    $experiences = new WP_Query($args);
+    if ($experiences->have_posts()):
+?>
+    <section class="experiences my-5 py-3">
+        <div class="container">
+            <h3 class="my-5">Techniques I know</h3>
+            <div class="experiences--container my-3">
+                <?php
+                    while ( $experiences->have_posts() ) :
+                        $experiences->the_post();
+                ?>      
+                    <img src="<?php the_post_thumbnail_url() ?>"
+                        alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true); ?>"
+                        title="<?php echo get_the_title(get_post_thumbnail_id()); ?>"
+                        class="col-6 col-md-3 col-lg-2 col-xl-1"
+                    />
+                <?php
+                    endwhile;    
+                ?>
+            </div>
+        </div>
+    </section>
+<?php endif; ?>
 <?php get_footer(); ?>
