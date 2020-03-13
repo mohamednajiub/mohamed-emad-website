@@ -19,3 +19,42 @@
         }
     }
 }
+
+
+.horizontal-timeline{
+    .timeline{
+        .events{
+            background-color: #ccc;
+            .filling-line{
+                background-color: $primary--color;
+            }
+            a{
+                text-decoration: none;
+                font-family: 'Moon Regular';
+                &:after{
+                    border: 1px solid #ccc;
+                    background-color: $white;
+                    width: 25px;
+                    height: 25px;
+                    bottom: 50%;
+                    transform: translateY(100%);
+                }
+                &.selected,
+                &.older-event{
+                    &:after{
+                        background-color: $primary--color;
+                    }   
+                }
+            }
+        }
+    }
+    .events-content{
+        ul{
+            list-style-type: none;
+            li{
+                background-color: unset;
+                padding: 0;
+            }
+        }
+    }
+}

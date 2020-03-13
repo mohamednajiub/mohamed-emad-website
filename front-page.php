@@ -51,64 +51,37 @@
 <?php endif; ?>
 
 <?php
-    // $args = array(
-    //     'post_type' => 'experience',
-    //     'post_status' => 'publish',
-    //     'orderby' => 'date'
-    // );
-    // $experiences = new WP_Query($args);
-    // if ($experiences->have_posts()):
+    $args = array(
+        'post_type' => 'experience',
+        'post_status' => 'publish',
+        'orderby' => 'date'
+    );
+    $experiences = new WP_Query($args);
+    if ($experiences->have_posts()):
 ?>
     <section class="experiences my-5 py-3">
         <div class="container">
-            <h3 class="mt-5 mb-3">Things I do</h3>
-            <div class="wrapper">
-                <div class="timeline--area">
-                    <div class="line--area"></div>
-                    <div class="experience--item active" title="2008-02-14 20:00">
-                        <a href="#"  class="experience--details">
-                            <h5 class="my-2">position</h5>
-                            <div class="job--details">
-                                <img src="" alt="" class="company--image">
-                                <div class="job--timeline">
-                                    <time datetime="2008-02-14 20:00">start day</time>
-                                    <span>to</span>
-                                    <time datetime="2008-02-14 20:00">end day</time>
+            <div class="horizontal-timeline" id="example">
+                <div class="events-content">
+                    <ul>
+                        <li class="selected experience--item--copy" data-horizontal-timeline='{"date": "16/01/2014", "customDisplay": "16-01-2014"}'>
+                            <a href="#"  class="experience--details">
+                                <h5 class="my-2">position</h5>
+                                <div class="job--details">
+                                    <img src="" alt="" class="company--image">
+                                    <div class="job--timeline">
+                                        <time datetime="2008-02-14 20:00">start day</time>
+                                        <span>to</span>
+                                        <time datetime="2008-02-14 20:00">end day</time>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="experience--item" title="2008-02-14 20:00">
-                        <a href="#"  class="experience--details">
-                            <h5 class="my-2">position</h5>
-                            <div class="job--details">
-                                <img src="" alt="" class="company--image">
-                                <div class="job--timeline">
-                                    <time datetime="2008-02-14 20:00">start day</time>
-                                    <span>to</span>
-                                    <time datetime="2008-02-14 20:00">end day</time>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="experience--item" title="2008-02-14 20:00">
-                        <a href="#"  class="experience--details">
-                            <h5 class="my-2">position</h5>
-                            <div class="job--details">
-                                <img src="" alt="" class="company--image">
-                                <div class="job--timeline">
-                                    <time datetime="2008-02-14 20:00">start day</time>
-                                    <span>to</span>
-                                    <time datetime="2008-02-14 20:00">end day</time>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
-<?php // endif; ?>
+    
+<?php endif; ?>
 <?php get_footer(); ?>

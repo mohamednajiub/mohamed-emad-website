@@ -4,6 +4,8 @@
     color: #001440;
     text-decoration: none;
     width: max-content;
+    display: flex;
+    flex-direction: column;
 
     h5 {
         text-transform: uppercase;
@@ -19,9 +21,4 @@
             text-align: center;
         }
     }
-
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 60%;
 }

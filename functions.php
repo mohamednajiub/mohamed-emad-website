@@ -4,6 +4,11 @@ function add_styles()
 {
     wp_enqueue_style( 'normalize', get_template_directory_uri().'/css/normalize.min.css');
     wp_enqueue_style('bootstrap_grid', get_template_directory_uri().'/css/bootstrap-grid.min.css');
+    
+    
+    // horizontal timeline 2.0
+    wp_enqueue_style('horizontal', 'https://cdn.jsdelivr.net/gh/ycodetech/horizontal-timeline-2.0@2/css/horizontal_timeline.2.0.min.css');
+
     wp_enqueue_style('theme_main_styles', get_template_directory_uri().'/css/main.css');
 }
 
@@ -12,6 +17,9 @@ function add_scripts()
 {
     wp_enqueue_script("jquery");
     wp_enqueue_script('theme_main_script', get_template_directory_uri() . '/js/main.bundle.js' );
+    
+    // horizontal timeline 2.0
+    wp_enqueue_script('horizontal','https://cdn.jsdelivr.net/gh/ycodetech/horizontal-timeline-2.0@2/JavaScript/horizontal_timeline.2.0.min.js' );
 }
 
 
