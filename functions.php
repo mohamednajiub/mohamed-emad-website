@@ -1,5 +1,7 @@
 <?php
 
+require(get_template_directory() . '/inc/function-admin.php');
+
 function add_styles()
 {
     wp_enqueue_style( 'normalize', get_template_directory_uri().'/css/normalize.min.css');
