@@ -1,5 +1,5 @@
-$(document).ready(function(){
-   $('#example').horizontalTimeline({
+$(document).ready(function () {
+   $('#experiences').horizontalTimeline({
       desktopDateIntervals: 200, //************\\
       tabletDateIntervals: 150, // Minimum: 120 \\
       mobileDateIntervals: 120, //****************\\
@@ -30,5 +30,5 @@ $(document).ready(function(){
       },
    });
 
-   $('.experience--item--copy').not(':first').removeClass('selected')
+
 });

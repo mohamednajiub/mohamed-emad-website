@@ -31,7 +31,7 @@
 ?>
     <section class="technologies my-5 py-3">
         <div class="container">
-            <h3 class="my-5">Techniques I know</h3>
+            <h3 class="my-5 section--title">Techniques I know</h3>
             <div class="technologies--container my-3">
                 <?php
                     while ( $technologies->have_posts() ) :
@@ -64,7 +64,9 @@
 ?>
     <section class="experiences my-5 py-3">
         <div class="container">
-            <div class="horizontal-timeline" id="example">
+
+        <h3 class="my-5 section--title">Things I Do</h3>
+            <div class="horizontal-timeline" id="experiences">
                 <div class="events-content">
                     <ul>
                         <?php
