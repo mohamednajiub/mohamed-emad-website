@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+$(document).ready(function(){
    $('#example').horizontalTimeline({
       desktopDateIntervals: 200, //************\\
       tabletDateIntervals: 150, // Minimum: 120 \\
@@ -29,4 +29,6 @@ jQuery(document).ready(function ($) {
          "right": "exit-right"
       },
    });
+
+   $('.experience--item--copy').not(':first').removeClass('selected')
 });

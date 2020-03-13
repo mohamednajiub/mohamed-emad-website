@@ -48,7 +48,10 @@
             </div>
         </div>
     </section>
-<?php endif; ?>
+<?php
+    endif;
+    wp_reset_postdata();
+?>
 
 <?php
     $args = array(
@@ -64,24 +67,50 @@
             <div class="horizontal-timeline" id="example">
                 <div class="events-content">
                     <ul>
-                        <li class="selected experience--item--copy" data-horizontal-timeline='{"date": "16/01/2014", "customDisplay": "16-01-2014"}'>
-                            <a href="#"  class="experience--details">
-                                <h5 class="my-2">position</h5>
-                                <div class="job--details">
-                                    <img src="" alt="" class="company--image">
-                                    <div class="job--timeline">
-                                        <time datetime="2008-02-14 20:00">start day</time>
-                                        <span>to</span>
-                                        <time datetime="2008-02-14 20:00">end day</time>
+                        <?php
+                            while ( $experiences->have_posts() ) :
+                            $experiences->the_post();
+                            $experience_start_date = get_post_meta( get_the_ID(), 'mn_job_start_date' );
+                            $experience_end_date = get_post_meta( get_the_ID(), 'mn_job_end_date' );
+
+                            $used_attr_start_date = date('d/m/Y',strtotime($experience_start_date[0]));
+                            $used_string_start_date = date('d-m-Y',strtotime($experience_start_date[0]));
+                        ?>  
+                            <li class=" experience--item--copy" data-horizontal-timeline='{"date": "<?php echo($used_attr_start_date); ?>", "customDisplay": "<?php echo $used_string_start_date; ?>"}'>
+                                <a href="#"  class="experience--details">
+                                    <h5 class="my-2"><?php the_title() ?></h5>
+                                    <div class="job--details">
+                                        <?php the_post_thumbnail('thumbnail'); ?>
+                                        <div class="job--timeline">
+                                            <time datetime="<?php echo($used_string_start_date); ?> 09:00"><?php echo($used_string_start_date); ?></time>
+                                            <span>to</span>
+                                            <?php 
+                                                if($experience_end_date[0]):
+                                                    $used_string_end_date = date('m-Y',strtotime($experience_end_date[0]));
+                                            ?>
+                                                <time datetime="<?php echo($used_string_end_date); ?> 09:00"><?php echo($used_string_end_date); ?></time>
+                                            <?php
+                                                else:
+                                            ?>
+                                                <p class="m-0">Present</p>
+                                            <?php
+                                                endif;
+                                            ?>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </li>
+                                </a>
+                            </li>
+                        <?php
+                            endwhile;    
+                        ?>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
     
-<?php endif; ?>
+<?php
+    endif;
+    wp_reset_postdata();
+?>
 <?php get_footer(); ?>

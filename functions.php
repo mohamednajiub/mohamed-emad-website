@@ -15,11 +15,16 @@ function add_styles()
 
 function add_scripts()
 {
-    wp_enqueue_script("jquery");
-    wp_enqueue_script('theme_main_script', get_template_directory_uri() . '/js/main.bundle.js' );
+    // remove old jquery
+    wp_deregister_script( 'jquery' );
+    // add jquery v 3.4.1
+    wp_register_script( 'jquery', "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js", array(), '1.12.0' );
+    wp_enqueue_script('jquery');
+    
     
     // horizontal timeline 2.0
     wp_enqueue_script('horizontal','https://cdn.jsdelivr.net/gh/ycodetech/horizontal-timeline-2.0@2/JavaScript/horizontal_timeline.2.0.min.js' );
+    wp_enqueue_script('theme_main_script', get_template_directory_uri() . '/js/main.bundle.js' );
 }
 
 
