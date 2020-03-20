@@ -1,0 +1,41 @@
+.menu--toggler {
+    position: fixed;
+    top: 25%;
+    right: 0;
+    transform: translateY(50%);
+    z-index: 99;
+    cursor: pointer;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid $black;
+    
+    .bar {
+        width: 30px;
+        height: 4px;
+        background-color: $primary--color;
+        transition: 0.5s all ease-in-out;
+        border-radius: 3px;
+    }
+
+    &.open {
+        justify-content: center !important;
+        position: fixed;
+
+        .bar {
+            &:first-child {
+                transform: rotate(45deg);
+                position: absolute;
+            }
+
+            &:nth-child(2) {
+                transform: translateX(-100vw);
+            }
+
+            &:last-child {
+                position: absolute;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

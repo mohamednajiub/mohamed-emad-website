@@ -1,0 +1,54 @@
+nav {
+    .brand {
+        &--link {
+            color: $gray;
+            text-decoration: none;
+            h1 {
+                font-size: 2rem;
+                font-family: Potra;
+            }
+            span {
+                display: block;
+                font-size: 1rem;
+                font-family: 'Moon Bold';
+                text-align: right
+            }
+        }
+    }
+    .navigation {
+        
+        ul {
+            list-style-type: none;
+            li {
+                a{
+                    text-decoration: none;
+                    color: $primary--color;
+                    text-transform: uppercase;
+                    font-family: Potra;
+                    font-size: 1.5rem;
+                    &:hover,
+                    &:focus,
+                    &:active{
+                        text-decoration: none;
+                        color: $primary--color;
+                        text-transform: uppercase;
+                        font-family: Potra;
+                    }
+                }
+            }
+        }
+        &.open{
+            left: 0;
+        }
+        @media screen and (max-width: $small_tablet_max_width){
+            position: absolute;
+            top: 100px;
+            left: -100%;
+            z-index: 9;
+            transition: all 0.5s cubic-bezier(.09,.08,.38,.82);
+            height: 100vh;
+            width: 100vw;
+            background-color: $white;
+        }
+    }
+}
