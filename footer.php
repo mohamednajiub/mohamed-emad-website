@@ -1,5 +1,5 @@
 <footer>
-    <div class="container d-flex justify-content-between align-items-center">
+    <div class="container d-flex justify-content-between align-items-center flex-column flex-sm-row">
         <p>
             © Mohamed Najiub - <?php echo date('Y'); ?>
         </p>
