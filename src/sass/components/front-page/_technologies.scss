@@ -1,7 +1,19 @@
-.technologies{
-    h3{
+.technologies {
+    h3 {
         font-family: 'Potra';
         font-size: 1.5rem;
         color: $primary--color;
+    }
+
+    img {
+        max-width: 100%;
+
+        @media screen and (min-width: $mobile_landscape_min_width)and (max-width: $bootstrap_meduim) {
+            max-width: 70%;
+        }
+
+        @media screen and (min-width: calc(#{$bootstrap_large} - 0.2px)) {
+            max-width: 60% !important;
+        }
     }
 }
