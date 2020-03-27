@@ -4,11 +4,11 @@ jQuery(document).ready(function($) {
         $('.navigation').toggleClass('open');
 
         if ($('.navigation').hasClass('open')) {
-            $('body').css({
+            $('body, html').css({
                 'overflow': 'hidden'
             });
         } else {
-            $('body').css({
+            $('body, html').css({
                 'overflow': 'auto'
             });
         }
