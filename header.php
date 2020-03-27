@@ -20,6 +20,12 @@
                 </a>
             </div>
             <div class="col-lg-6 navigation">
+                <div class="d-lg-none brand">
+                    <a href="<?php echo site_url(); ?>" title="Mohamed Najiub" class="brand--link">
+                        <h1 class="m-0">Mohamed Najiub</h1>
+                        <span>Front-end & WordPress Developer</span>
+                    </a>
+                </div>
                 <ul class="d-flex flex-column flex-lg-row justify-content-between p-0 align-items-center">
                     <li><a href="#" title="about">About</a></li>
                     <li><a href="#" title="about">Portfolio</a></li>
