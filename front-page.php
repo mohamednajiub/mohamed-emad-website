@@ -29,7 +29,7 @@
     $technologies = new WP_Query($args);
     if ($technologies->have_posts()):
 ?>
-    <section class="technologies my-5 py-3">
+    <section class="technologies my-5 py-3" id="technologies">
         <div class="container">
             <h3 class="my-5 section--title">Techniques I know</h3>
             <div class="row my-3 justify-content-center align-items-center flex-wrap ">
@@ -73,10 +73,9 @@
     $experiences = new WP_Query($args);
     if ($experiences->have_posts()):
 ?>
-    <section class="experiences my-5 py-3">
+    <section class="experiences my-5 py-3" id="experience">
         <div class="container">
-
-        <h3 class="my-5 section--title">Things I Do</h3>
+            <h3 class="my-5 section--title">Things I Do</h3>
             <div class="horizontal-timeline" id="experiences">
                 <div class="events-content">
                     <ul>

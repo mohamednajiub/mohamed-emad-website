@@ -27,10 +27,9 @@
                     </a>
                 </div>
                 <ul class="d-flex flex-column flex-lg-row justify-content-between p-0 align-items-center">
-                    <li><a href="#" title="about">About</a></li>
-                    <li><a href="#" title="about">Portfolio</a></li>
-                    <li><a href="#" title="about">Blog</a></li>
-                    <li><a href="#" title="about">Contact</a></li>
+                    <li><a href="#about" title="about">About</a></li>
+                    <li><a href="#technologies" title="Techniques">Techniques</a></li>
+                    <li><a href="#experience" title="experience">experience</a></li>
                 </ul>
             </div>
             <div class="menu--toggler d-flex d-lg-none flex-column justify-content-between" id="menu_toggler">
