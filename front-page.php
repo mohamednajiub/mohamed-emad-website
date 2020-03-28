@@ -13,7 +13,7 @@
                     sharing the experience. is currently most passionate about office work.
                 </p>
                 <div class="header--footer">
-                    <a href="#" class="btn btn--primary">Resume</a>
+                    <a href="https://mohamednajiub.me/wp-content/uploads/2020/03/Mohamed-Najiub-Resume.pdf" rel="noreferrer noopener" target="_blank"class="btn btn--primary">Resume</a>
                     <a href="#" class="btn btn--default">contact</a>
                 </div>
             </div>
@@ -58,7 +58,16 @@
     $args = array(
         'post_type' => 'experience',
         'post_status' => 'publish',
-        'orderby' => 'date',
+        'meta_key' => 'mn_job_start_date',
+        'orderby' => 'meta_query',
+        'order' => 'ASC',
+        'meta_query' => array(
+            array(
+                'key' => 'mn_job_start_date',
+                'value' => date("ddmmYY"),
+                'compare' => '<='
+            )                   
+        ),
         'posts_per_page' => -1
     );
     $experiences = new WP_Query($args);
@@ -80,17 +89,21 @@
                             $used_attr_start_date = date('d/m/Y',strtotime($experience_start_date[0]));
                             $used_string_start_date = date('d-m-Y',strtotime($experience_start_date[0]));
                         ?>  
-                            <li class=" experience--item--copy" data-horizontal-timeline='{"date": "<?php echo($used_attr_start_date); ?>", "customDisplay": "<?php echo $used_string_start_date; ?>"}'>
+                            <li class=" experience--item" data-horizontal-timeline='{"date": "<?php echo($used_attr_start_date); ?>", "customDisplay": "<?php echo $used_string_start_date; ?>"}'>
                                 <a href="#"  class="experience--details">
                                     <h5 class="my-2"><?php the_title() ?></h5>
                                     <div class="job--details">
-                                        <?php the_post_thumbnail('thumbnail'); ?>
-                                        <div class="job--timeline">
+                                        <img src="<?php the_post_thumbnail_url() ?>"
+                                            alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true); ?>"
+                                            title="<?php echo get_the_title(get_post_thumbnail_id()); ?>"
+                                            class="my-3"
+                                        />
+                                        <div class="job--timeline ml-4 my-3">
                                             <time datetime="<?php echo($used_string_start_date); ?> 09:00"><?php echo($used_string_start_date); ?></time>
                                             <span>to</span>
                                             <?php 
                                                 if($experience_end_date[0]):
-                                                    $used_string_end_date = date('m-Y',strtotime($experience_end_date[0]));
+                                                    $used_string_end_date = date('d-m-Y',strtotime($experience_end_date[0]));
                                             ?>
                                                 <time datetime="<?php echo($used_string_end_date); ?> 09:00"><?php echo($used_string_end_date); ?></time>
                                             <?php

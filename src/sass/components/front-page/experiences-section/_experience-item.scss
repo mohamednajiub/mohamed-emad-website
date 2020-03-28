@@ -2,43 +2,10 @@
     display: inline-block;
     position: relative;
     height: 100%;
-    margin-right: 70px;
     transition: width .5s;
     z-index: 1;
     font-family: 'Jost* Book';
-
-    &:after {
-        content: '';
-        width: 25px;
-        height: 25px;
-        border: 1px solid #000;
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: $white;
-        cursor: pointer;
-        margin: 0 auto;
+    img{
+        max-width: 10rem;
     }
-
-    &.active,
-    &:hover,
-    &:focus{
-        &:after {
-            background-color: $primary--color;
-        }
-        .experience--details {
-            display: flex !important;
-            flex-direction: column !important;
-        }
-    }
-}
-
-.experience--item--copy {
-    display: inline-block;
-    position: relative;
-    height: 100%;
-    transition: width .5s;
-    z-index: 1;
-    font-family: 'Jost* Book';
 }
