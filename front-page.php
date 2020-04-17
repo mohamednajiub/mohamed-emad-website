@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6 header--photo">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/Mohamed-Najiub.jpg" alt="Mohamed Najiub Picture">
+                <img src="<?php echo get_template_directory_uri(); ?>/dest/images/Mohamed-Najiub.jpg" alt="Mohamed Najiub Picture">
             </div>
             <div class="col-sm-6 header--details">
                 <h1>Mohamed Najiub</h1>
@@ -66,7 +66,7 @@
                 'key' => 'mn_job_start_date',
                 'value' => date("ddmmYY"),
                 'compare' => '<='
-            )                   
+            )
         ),
         'posts_per_page' => -1
     );
@@ -87,7 +87,7 @@
 
                             $used_attr_start_date = date('d/m/Y',strtotime($experience_start_date[0]));
                             $used_string_start_date = date('d-m-Y',strtotime($experience_start_date[0]));
-                        ?>  
+                        ?>
                             <li class=" experience--item" data-horizontal-timeline='{"date": "<?php echo($used_attr_start_date); ?>", "customDisplay": "<?php echo $used_string_start_date; ?>"}'>
                                 <a href="#"  class="experience--details">
                                     <h5 class="my-2"><?php the_title() ?></h5>
@@ -100,7 +100,7 @@
                                         <div class="job--timeline ml-4 my-3">
                                             <time datetime="<?php echo($used_string_start_date); ?> 09:00"><?php echo($used_string_start_date); ?></time>
                                             <span>to</span>
-                                            <?php 
+                                            <?php
                                                 if($experience_end_date[0]):
                                                     $used_string_end_date = date('d-m-Y',strtotime($experience_end_date[0]));
                                             ?>
@@ -117,14 +117,14 @@
                                 </a>
                             </li>
                         <?php
-                            endwhile;    
+                            endwhile;
                         ?>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-    
+
 <?php
     endif;
     wp_reset_postdata();

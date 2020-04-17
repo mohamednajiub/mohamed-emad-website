@@ -4,14 +4,14 @@ require(get_template_directory() . '/inc/function-admin.php');
 
 function add_styles()
 {
-    wp_enqueue_style( 'normalize', get_template_directory_uri().'/css/normalize.min.css');
-    wp_enqueue_style('bootstrap_grid', get_template_directory_uri().'/css/bootstrap-grid.min.css');
-    wp_enqueue_style('theme_main_styles', get_template_directory_uri().'/css/main.css');
+    wp_enqueue_style( 'normalize', get_template_directory_uri().'/dest/css/base/normalize.min.css');
+    wp_enqueue_style('bootstrap_grid', get_template_directory_uri().'/dest/css/layout/bootstrap-grid.min.css');
+    wp_enqueue_style('theme_main_styles', get_template_directory_uri().'/dest/css/main.css');
 
     if( is_front_page() ){
         // horizontal timeline 2.0
         wp_enqueue_style('horizontal', 'https://cdn.jsdelivr.net/gh/ycodetech/horizontal-timeline-2.0@2/css/horizontal_timeline.2.0.min.css');
-        wp_enqueue_style('front-page-style', get_template_directory_uri().'/css/front-page.css');
+        wp_enqueue_style('front-page-style', get_template_directory_uri().'/dest/css/front-page.css');
     }
 }
 
@@ -23,13 +23,13 @@ function add_scripts()
     // add jquery v1.12.0
     wp_register_script( 'jquery', "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js", array(), '1.12.0' );
     wp_enqueue_script('jquery');
-    
+
     if(is_front_page()){
         // horizontal timeline 2.0
         wp_enqueue_script('horizontal','https://cdn.jsdelivr.net/gh/ycodetech/horizontal-timeline-2.0@2/JavaScript/horizontal_timeline.2.0.min.js', array('jquery') );
     }
 
-    wp_enqueue_script('theme_main_script', get_template_directory_uri() . '/js/main.bundle.js', array('jquery') );
+    wp_enqueue_script('theme_main_script', get_template_directory_uri() . '/dest/js/main.bundle.js', array('jquery') );
 }
 
 
@@ -66,7 +66,7 @@ function theme_post_types(){
                 'not_found' => 'No Technologies found in your search',
                 'all_items' => 'All Technologies',
                 'insert_into_item' => 'Insert in Technologies Post Type',
-                'uploaded_to_this_item' => 'Upload this to Technologies Post Type',    
+                'uploaded_to_this_item' => 'Upload this to Technologies Post Type',
             ),
             'description' => 'Technogies is the skills that I Know',
             'show_in_rest' => true,
@@ -96,7 +96,7 @@ function theme_post_types(){
                 'not_found' => 'No Experiences found in your search',
                 'all_items' => 'All Experiences',
                 'insert_into_item' => 'Insert in Experiences Post Type',
-                'uploaded_to_this_item' => 'Upload this to Experiences Post Type',    
+                'uploaded_to_this_item' => 'Upload this to Experiences Post Type',
             ),
             'description' => 'Experiences is the all work experience that I worked on.',
             'public' => true,
