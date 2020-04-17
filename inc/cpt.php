@@ -55,6 +55,35 @@ function theme_post_types()
 			'has_archive' => true,
 			'menu_icon' => 'dashicons-id',
 			'supports' => array('title', 'editor', 'thumbnail'),
+			'show_in_rest' => true,
+		)
+	);
+
+	register_post_type(
+		'portfolio',
+		// experience custom post type Options
+		array(
+			'labels' => array(
+				'menu_name' => 'Portfolio',
+				'name' => 'Portfolio',
+				'singular_name' => 'Portfolio',
+				'add_new' => 'Add new Portfolio',
+				'add_new_item' => 'Add New Portfolio',
+				'edit_item' => 'Edit Portfolio',
+				'view_item' => 'View Portfolio',
+				'view_items' => 'View All Portfolio',
+				'search_items' => 'Search in Portfolio',
+				'not_found' => 'No Portfolio found in your search',
+				'all_items' => 'All Portfolio',
+				'insert_into_item' => 'Insert in Portfolio Post Type',
+				'uploaded_to_this_item' => 'Upload this to Portfolio Post Type',
+			),
+			'description' => 'Portfolio is the all work experience that I worked on.',
+			'public' => true,
+			'has_archive' => true,
+			'menu_icon' => 'dashicons-vault',
+			'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+			'show_in_rest' => true,
 		)
 	);
 }
