@@ -1,5 +1,5 @@
 <?php get_header() ?>
-<header class="my-4">
+<header class="my-4" id="about">
     <div class="container">
         <div class="row">
             <div class="col-sm-6 header--photo">
