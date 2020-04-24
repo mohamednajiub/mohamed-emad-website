@@ -2,6 +2,7 @@
 
 require(get_template_directory() . '/inc/function-admin.php');
 require(get_template_directory() . '/inc/cpt.php');
+require(get_template_directory() . '/inc/custom-fields.php');
 
 function add_styles()
 {
