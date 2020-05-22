@@ -141,7 +141,7 @@ if ($portfolio->have_posts()) :
 				while ($portfolio->have_posts()) :
 					$portfolio->the_post();
 				?>
-					<div class="col-md-2 col-lg-3 my-2">
+					<div class="col-md-4 col-lg-3 my-2">
 						<div class="project--item">
 							<div class="project--item-image">
 								<?php the_post_thumbnail(); ?>
