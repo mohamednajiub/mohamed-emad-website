@@ -18,6 +18,26 @@
 		}
 		&-links{
 			display: flex;
+			ul{
+				padding: 0;
+				list-style-type: none;
+				display: flex;
+				justify-content: space-between;
+				li{
+					&:not(:last-child){
+						margin-right: 0.8rem;
+					}
+					a{
+						font-size: 1.2rem;
+						color: $black;
+						&:active,
+						&:focus,
+						&:hover{
+							color: $primary--color;
+						}
+					}
+				}
+			}
 		}
 	}
 }
