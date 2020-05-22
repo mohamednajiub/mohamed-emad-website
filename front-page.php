@@ -169,6 +169,16 @@ if ($portfolio->have_posts()) :
 											endif;
 										?>
 									</ul>
+									<?php
+										$company_url = get_post_meta(get_the_ID(), 'portfolio_company_image', true);
+										if ($company_url):
+											$get_image_id = attachment_url_to_postid($company_url);
+											$alt = get_post_meta ( $get_image_id, '_wp_attachment_image_alt', true );
+									?>
+									<img src="<?php echo $company_url ?>" alt="<?php echo $alt; ?>">
+									<?php
+										endif;
+									?>
 								</div>
 								<?php
 									endif;
