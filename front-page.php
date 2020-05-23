@@ -145,6 +145,9 @@ if ($portfolio->have_posts()) :
 						<div class="card">
 							<div class="card-image">
 								<?php the_post_thumbnail(); ?>
+								<div class="overlay">
+									<a href="<?php the_permalink();?>" class="btn btn--primary">See Project</a>
+								</div>
 							</div>
 							<div class="card-details">
 								<?php the_title('<h3>', '</h3>') ?>
