@@ -141,14 +141,48 @@ if ($portfolio->have_posts()) :
 				while ($portfolio->have_posts()) :
 					$portfolio->the_post();
 				?>
-					<div class="col-md-2 col-lg-4 my-2">
-						<div class="portfolio--item">
-							<div class="portfolio--image">
-
+					<div class="col-md-4 col-lg-3 my-2">
+						<div class="project--item">
+							<div class="project--item-image">
+								<?php the_post_thumbnail(); ?>
 							</div>
-							<div class="portfolio--details">
+							<div class="project--item-details">
 								<?php the_title( '<h3>', '</h3>' ) ?>
-								<p><?php the_excerpt() ?></p>
+								<p><?php the_excerpt();?></p>
+								<?php
+									$site_link = get_post_meta( get_the_ID(), 'site_link', true );
+									$project_repo = get_post_meta( get_the_ID(), 'project_repo', true);
+									if ($site_link || $project_repo):
+								?>
+								<div class="project--item-details-links">
+									<ul>
+										<?php
+											if($site_link):
+										?>
+										<li><a href="<?php echo $site_link; ?>"><i class="fas fa-link"></i></a></li>
+										<?php
+											endif;
+											if($project_repo):
+										?>
+										<li><a href="<?php echo $project_repo; ?>"><i class="fab fa-github"></i></a></li>
+										<?php
+											endif;
+										?>
+									</ul>
+									<?php
+										$company_url = get_post_meta(get_the_ID(), 'portfolio_company_image', true);
+										if ($company_url):
+											$get_image_id = attachment_url_to_postid($company_url);
+											$alt = get_post_meta ( $get_image_id, '_wp_attachment_image_alt', true );
+									?>
+									<img src="<?php echo $company_url ?>" alt="<?php echo $alt; ?>">
+									<?php
+										endif;
+									?>
+								</div>
+								<?php
+									endif;
+								?>
 							</div>
 						</div>
 					</div>
