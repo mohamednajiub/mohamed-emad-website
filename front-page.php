@@ -150,7 +150,7 @@ if ($portfolio->have_posts()) :
 								</div>
 							</div>
 							<div class="card-details">
-								<?php the_title('<h3>', '</h3>') ?>
+								<h3><a href="<?php the_permalink();?>"><?php the_title() ?></a></h3>
 								<p><?php the_excerpt(); ?></p>
 								<?php
 								$site_link = get_post_meta(get_the_ID(), 'site_link', true);
