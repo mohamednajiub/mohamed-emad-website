@@ -205,7 +205,7 @@ $args = array(
 	'post_type'   => 'Post',
     'post_status' => 'publish',
     'orderby' => 'date',
-    'posts_per_page' => 4
+    'posts_per_page' => 2
 );
 $blog = new WP_Query($args);
 if ($blog->have_posts()) :
@@ -240,6 +240,18 @@ if ($blog->have_posts()) :
 				endwhile;
 				?>
 			</div>
+			<?php
+				$posts_object = wp_count_posts('post','');
+				$posts_value_array = get_object_vars($posts_object);
+				$posts_num = $posts_value_array['publish'];
+				if($posts_num > 4 ):
+			?>
+			<div class="row justify-content-center">
+				<a href="<?php echo site_url( 'blog'); ?>" class="btn btn--primary">Show All</a>
+			</div>
+			<?php
+				endif;
+			?>
 		</div>
 	</section>
 <?php
