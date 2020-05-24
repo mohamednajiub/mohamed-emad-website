@@ -200,4 +200,51 @@ endif;
 wp_reset_postdata();
 ?>
 
+<?php
+$args = array(
+	'post_type'   => 'Post',
+    'post_status' => 'publish',
+    'orderby' => 'date',
+    'posts_per_page' => 4
+);
+$blog = new WP_Query($args);
+if ($blog->have_posts()) :
+?>
+	<section class="blog my-5 py-3" id="blog">
+		<div class="container">
+			<h3 class="my-5 section--title">Blog</h3>
+
+			<div class="row my-3 justify-content-center align-items-center flex-wrap ">
+				<?php
+				while ($blog->have_posts()) :
+					$blog->the_post();
+				?>
+					<div class="col-md-4 col-lg-3 my-2">
+						<div class="card">
+							<div class="card-image">
+								<?php the_post_thumbnail(); ?>
+								<div class="overlay">
+									<a href="<?php the_permalink();?>" class="btn btn--primary">Read Article</a>
+								</div>
+							</div>
+							<div class="card-details">
+								<h3><a href="<?php the_permalink();?>"><?php the_title() ?></a></h3>
+								<p><?php echo wp_trim_words( get_the_content(), 9 ) ?></p>
+								<div class="card-details-links">
+
+								</div>
+							</div>
+						</div>
+					</div>
+				<?php
+				endwhile;
+				?>
+			</div>
+		</div>
+	</section>
+<?php
+endif;
+wp_reset_postdata();
+?>
+
 <?php get_footer(); ?>
