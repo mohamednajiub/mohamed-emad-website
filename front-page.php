@@ -205,7 +205,7 @@ $args = array(
 	'post_type'   => 'Post',
     'post_status' => 'publish',
     'orderby' => 'date',
-    'posts_per_page' => 2
+    'posts_per_page' => 4
 );
 $blog = new WP_Query($args);
 if ($blog->have_posts()) :
