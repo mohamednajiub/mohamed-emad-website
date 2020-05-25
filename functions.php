@@ -10,10 +10,17 @@ function add_styles()
 	wp_enqueue_style('bootstrap_grid', get_template_directory_uri() . '/dest/css/layout/bootstrap-grid.min.css');
 	wp_enqueue_style('theme_main_styles', get_template_directory_uri() . '/dest/css/main.css');
 
-	if (is_front_page()) {
+	if (is_front_page())
+	{
 		// horizontal timeline 2.0
 		wp_enqueue_style('horizontal', 'https://cdn.jsdelivr.net/gh/ycodetech/horizontal-timeline-2.0@2/css/horizontal_timeline.2.0.min.css');
 		wp_enqueue_style('front-page-style', get_template_directory_uri() . '/dest/css/front-page.css');
+	}
+
+	if (is_home())
+	{
+		// index page style
+		wp_enqueue_style('index-page-style', get_template_directory_uri() . '/dest/css/index.css');
 	}
 }
 
@@ -25,13 +32,14 @@ function add_scripts()
 	// add jquery v1.12.0
 	wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js", array(), '1.12.0');
 	wp_enqueue_script('jquery');
+	wp_enqueue_script('theme_main_script', get_template_directory_uri() . '/dest/js/main.bundle.js', array('jquery'));
 
-	if (is_front_page()) {
+	if (is_front_page())
+	{
 		// horizontal timeline 2.0
 		wp_enqueue_script('horizontal', 'https://cdn.jsdelivr.net/gh/ycodetech/horizontal-timeline-2.0@2/JavaScript/horizontal_timeline.2.0.min.js', array('jquery'));
+		wp_enqueue_script('front-page-scripts', get_template_directory_uri() . '/dest/js/front-page.bundle.js', array('jquery'));
 	}
-
-	wp_enqueue_script('theme_main_script', get_template_directory_uri() . '/dest/js/main.bundle.js', array('jquery'));
 }
 
 
