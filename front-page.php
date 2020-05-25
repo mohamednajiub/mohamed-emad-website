@@ -141,7 +141,7 @@ if ($portfolio->have_posts()) :
 				while ($portfolio->have_posts()) :
 					$portfolio->the_post();
 				?>
-					<div class="col-md-4 col-lg-3 my-2">
+					<article class="col-md-4 col-lg-3 my-2">
 						<div class="card">
 							<div class="card-image">
 								<?php the_post_thumbnail(); ?>
@@ -188,7 +188,7 @@ if ($portfolio->have_posts()) :
 								?>
 							</div>
 						</div>
-					</div>
+					</article>
 				<?php
 				endwhile;
 				?>
@@ -219,7 +219,7 @@ if ($blog->have_posts()) :
 				while ($blog->have_posts()) :
 					$blog->the_post();
 				?>
-					<div class="col-md-4 col-lg-3 my-2">
+					<article class="col-md-4 col-lg-3 my-2">
 						<div class="card">
 							<div class="card-image">
 								<?php the_post_thumbnail(); ?>
@@ -235,7 +235,7 @@ if ($blog->have_posts()) :
 								</div>
 							</div>
 						</div>
-					</div>
+					</article>
 				<?php
 				endwhile;
 				?>
