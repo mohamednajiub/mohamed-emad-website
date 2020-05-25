@@ -1,0 +1,14 @@
+@import "../base/screen_sizes_variables";
+@import "../base/color_variables";
+@import "../base/fonts";
+
+header{
+	background-position: center;
+	background-size: cover;
+	min-height: 40vh;
+	.row{
+		height: 40vh;
+	}
+}
+
+@import '../components/article-card';
