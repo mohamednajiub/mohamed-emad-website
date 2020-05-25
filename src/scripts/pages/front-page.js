@@ -1,1 +1,1 @@
-import './components/front-page/_experience';
+import '../components/front-page/_experience';
