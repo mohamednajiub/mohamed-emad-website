@@ -21,18 +21,27 @@ while (have_posts()) :
 			<div class="row justify-content-center align-items-center align-content-center flex-column">
 				<h2 class="page--title my-2"><?php single_post_title() ?></h2>
 				<time datetime="<?php echo get_the_date('d-M-Y') ?>"><?php echo get_the_date('d-M-Y') ?></time>
-				<?php the_category( ) ?>
+				<?php the_category() ?>
 			</div>
 		</div>
 	</header>
-<?php
-	the_post_navigation(
-		array(
-			'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'mohamednajiub') . '</span> <span class="nav-title">%title</span>',
-			'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'mohamednajiub') . '</span> <span class="nav-title">%title</span>',
-		)
-	);
+	<main>
+		<div class="container">
+			<article>
+				<?php the_content(); ?>
+			</article>
 
+			<?php
+			the_post_navigation(
+				array(
+					'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'mohamednajiub') . '</span> <span class="nav-title">%title</span>',
+					'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'mohamednajiub') . '</span> <span class="nav-title">%title</span>',
+				)
+			); ?>
+		</div>
+
+	</main>
+<?php
 endwhile; // End of the loop.
 ?>
 
