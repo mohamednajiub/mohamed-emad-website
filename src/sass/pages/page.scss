@@ -2,26 +2,46 @@
 @import "../base/color_variables";
 @import "../base/fonts";
 
-.page--header{
+.page--header {
 	background-position: center;
 	background-size: cover;
 	min-height: 40vh;
 	position: relative;
-	.overlay{
+
+	.overlay {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		top: 0;
 		left: 0;
-		background-color: rgba(0,0,0,0.6);
+		background-color: rgba(0, 0, 0, 0.6);
 		z-index: 0;
 	}
-	.container{
+
+	.container {
 		position: relative;
 		z-index: 2;
 	}
-	.row{
+
+	.row {
 		height: 40vh;
+	}
+
+	time {
+		color: $primary--color;
+		font-size: 1.3rem;
+	}
+
+	ul.post-categories,
+	.post-tags {
+		li{
+			margin-right: 0;
+		}
+		a{
+			margin-right: 0;
+			color: $primary--color;
+			background-color: transparent;
+		}
 	}
 }
 

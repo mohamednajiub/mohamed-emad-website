@@ -19,8 +19,9 @@ while (have_posts()) :
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row justify-content-center align-items-center align-content-center flex-column">
-				<h2 class="page--title"><?php single_post_title() ?></h2>
+				<h2 class="page--title my-2"><?php single_post_title() ?></h2>
 				<time datetime="<?php echo get_the_date('d-M-Y') ?>"><?php echo get_the_date('d-M-Y') ?></time>
+				<?php the_category( ) ?>
 			</div>
 		</div>
 	</header>
