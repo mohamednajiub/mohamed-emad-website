@@ -22,6 +22,12 @@ function add_styles()
 		// index page style
 		wp_enqueue_style('index-page-style', get_template_directory_uri() . '/dest/css/page.css');
 	}
+
+	if (is_singular())
+	{
+		// index page style
+		wp_enqueue_style('single-page-style', get_template_directory_uri() . '/dest/css/single.css');
+	}
 }
 
 function add_scripts()

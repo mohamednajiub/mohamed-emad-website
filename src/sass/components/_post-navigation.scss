@@ -1,0 +1,17 @@
+.post-navigation {
+	.nav-links{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	a {
+		display: flex;
+		flex-direction: column;
+		text-decoration: none;
+		color: $black;
+		.nav-subtitle{
+			font-family: 'Moon Bold';
+		}
+	}
+}

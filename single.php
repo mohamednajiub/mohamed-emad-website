@@ -31,13 +31,30 @@ while (have_posts()) :
 				<?php the_content(); ?>
 			</article>
 
+			<!-- <section class="container">
+				<div class="row">
+					<div class="col-10 next-prev-article">
+						<div class="btn prevBtn">
+							<?php // previous_post_link('<p class="font-blod">previous article</p> %link', '%title', false);
+							?>
+						</div>
+
+						<div class="btn nextBtn">
+							<?php // next_post_link('<p class="font-blod">Next article</p> %link', '%title', false);
+							?>
+						</div>
+					</div>
+				</div>
+			</section> -->
 			<?php
 			the_post_navigation(
 				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__('Previous:', 'mohamednajiub') . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__('Next:', 'mohamednajiub') . '</span> <span class="nav-title">%title</span>',
+					'prev_text' => '<span class="nav-subtitle"><i class="fas fa-chevron-left mr-2"></i>' . esc_html__('Previous Article', 'mohamednajiub') . '</span> <span class="nav-title">%title</span>',
+					'next_text' => '<span class="nav-subtitle">' . esc_html__('Next Article', 'mohamednajiub') . '<i class="fas fa-chevron-right ml-2"></i></span> <span class="nav-title">%title</span>',
+					"screen_reader_text" => ' '
 				)
-			); ?>
+			);
+			?>
 		</div>
 
 	</main>
