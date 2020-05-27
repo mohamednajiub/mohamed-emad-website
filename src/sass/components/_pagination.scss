@@ -1,0 +1,32 @@
+.pagination {
+	.nav-links {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+
+		a,
+		span {
+			display: block;
+			padding: 1rem;
+			border: 1px solid $black;
+			text-decoration: none;
+
+			&:not(:last-child) {
+				border-right: none;
+			}
+
+			color: $black;
+
+			&:hover,
+			&:focus {
+				color: $primary--color;
+			}
+		}
+
+		span {
+			color: $primary--color;
+			font-family: 'Moon Bold';
+		}
+	}
+}
