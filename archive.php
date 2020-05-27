@@ -30,7 +30,7 @@ get_header();
 				?>
 			</div>
 		</div>
-	</header><!-- .page-header -->
+	</header>
 	<main>
 		<section>
 			<div class="container">
@@ -41,9 +41,7 @@ get_header();
 						the_post();
 						get_template_part('template-parts/content', get_post_type());
 					endwhile;
-					// the_posts_navigation();
 					?>
-
 				</div>
 			</div>
 		</section>

@@ -26,36 +26,53 @@ while (have_posts()) :
 		</div>
 	</header>
 	<main>
-		<div class="container">
-			<article>
-				<?php the_content(); ?>
-			</article>
+		<section class="content">
+			<div class="container">
+				<article>
+					<?php the_content(); ?>
+				</article>
+				<?php
+				the_post_navigation(
+					array(
+						'prev_text' => '<span class="nav-subtitle"><i class="fas fa-chevron-left mr-2"></i>' . esc_html__('Previous Article', 'mohamednajiub') . '</span> <span class="nav-title">%title</span>',
+						'next_text' => '<span class="nav-subtitle">' . esc_html__('Next Article', 'mohamednajiub') . '<i class="fas fa-chevron-right ml-2"></i></span> <span class="nav-title">%title</span>',
+						"screen_reader_text" => ' '
+					)
+				);
+				?>
+			</div>
+		</section>
+		<?php
+		$related = new WP_Query(
+			array(
+				'category__in'   => wp_get_post_categories($post->ID),
+				'posts_per_page' => 4,
+				'post__not_in'   => array($post->ID)
+			)
+		);
 
-			<!-- <section class="container">
-				<div class="row">
-					<div class="col-10 next-prev-article">
-						<div class="btn prevBtn">
-							<?php // previous_post_link('<p class="font-blod">previous article</p> %link', '%title', false);
-							?>
-						</div>
+		if ($related->have_posts()) :
+		?>
+			<section class="related-articles">
+				<div class="container">
+					<h3 class="section--title">Related Articles:</h3>
+					<div class="row align-items-center justify-content-center">
+						<?php
 
-						<div class="btn nextBtn">
-							<?php // next_post_link('<p class="font-blod">Next article</p> %link', '%title', false);
-							?>
-						</div>
+						while ($related->have_posts()) :
+							$related->the_post(); ?>
+
+						<?php
+							get_template_part('template-parts/content', get_post_type());
+						endwhile;
+						wp_reset_postdata();
+						?>
 					</div>
 				</div>
-			</section> -->
-			<?php
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle"><i class="fas fa-chevron-left mr-2"></i>' . esc_html__('Previous Article', 'mohamednajiub') . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__('Next Article', 'mohamednajiub') . '<i class="fas fa-chevron-right ml-2"></i></span> <span class="nav-title">%title</span>',
-					"screen_reader_text" => ' '
-				)
-			);
-			?>
-		</div>
+			</section>
+		<?php
+		endif;
+		?>
 
 	</main>
 <?php
