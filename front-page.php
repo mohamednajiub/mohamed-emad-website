@@ -141,55 +141,117 @@ if ($portfolio->have_posts()) :
 				while ($portfolio->have_posts()) :
 					$portfolio->the_post();
 				?>
-					<div class="col-md-4 col-lg-3 my-2">
-						<div class="project--item">
-							<div class="project--item-image">
+					<article class="col-md-4 col-lg-3 my-2">
+						<div class="card">
+							<div class="card-image">
 								<?php the_post_thumbnail(); ?>
-							</div>
-							<div class="project--item-details">
-								<?php the_title( '<h3>', '</h3>' ) ?>
-								<p><?php the_excerpt();?></p>
-								<?php
-									$site_link = get_post_meta( get_the_ID(), 'site_link', true );
-									$project_repo = get_post_meta( get_the_ID(), 'project_repo', true);
-									if ($site_link || $project_repo):
-								?>
-								<div class="project--item-details-links">
-									<ul>
-										<?php
-											if($site_link):
-										?>
-										<li><a href="<?php echo $site_link; ?>"><i class="fas fa-link"></i></a></li>
-										<?php
-											endif;
-											if($project_repo):
-										?>
-										<li><a href="<?php echo $project_repo; ?>"><i class="fab fa-github"></i></a></li>
-										<?php
-											endif;
-										?>
-									</ul>
-									<?php
-										$company_url = get_post_meta(get_the_ID(), 'portfolio_company_image', true);
-										if ($company_url):
-											$get_image_id = attachment_url_to_postid($company_url);
-											$alt = get_post_meta ( $get_image_id, '_wp_attachment_image_alt', true );
-									?>
-									<img src="<?php echo $company_url ?>" alt="<?php echo $alt; ?>">
-									<?php
-										endif;
-									?>
+								<div class="overlay">
+									<a href="<?php the_permalink();?>" class="btn btn--primary">See Project</a>
 								</div>
+							</div>
+							<div class="card-details">
+								<h3><a href="<?php the_permalink();?>"><?php the_title() ?></a></h3>
+								<p><?php the_excerpt(); ?></p>
 								<?php
-									endif;
+								$site_link = get_post_meta(get_the_ID(), 'site_link', true);
+								$project_repo = get_post_meta(get_the_ID(), 'project_repo', true);
+								if ($site_link || $project_repo) :
+								?>
+									<div class="card-details-links">
+										<ul>
+											<?php
+											if ($site_link) :
+											?>
+												<li><a href="<?php echo $site_link; ?>"><i class="fas fa-link"></i></a></li>
+											<?php
+											endif;
+											if ($project_repo) :
+											?>
+												<li><a href="<?php echo $project_repo; ?>"><i class="fab fa-github"></i></a></li>
+											<?php
+											endif;
+											?>
+										</ul>
+										<?php
+										$company_url = get_post_meta(get_the_ID(), 'portfolio_company_image', true);
+										if ($company_url) :
+											$get_image_id = attachment_url_to_postid($company_url);
+											$alt = get_post_meta($get_image_id, '_wp_attachment_image_alt', true);
+										?>
+											<img src="<?php echo $company_url ?>" alt="<?php echo $alt; ?>">
+										<?php
+										endif;
+										?>
+									</div>
+								<?php
+								endif;
 								?>
 							</div>
 						</div>
-					</div>
+					</article>
 				<?php
 				endwhile;
 				?>
 			</div>
+		</div>
+	</section>
+<?php
+endif;
+wp_reset_postdata();
+?>
+
+<?php
+$args = array(
+	'post_type'   => 'Post',
+    'post_status' => 'publish',
+    'orderby' => 'date',
+    'posts_per_page' => 4
+);
+$blog = new WP_Query($args);
+if ($blog->have_posts()) :
+?>
+	<section class="blog my-5 py-3" id="blog">
+		<div class="container">
+			<h3 class="my-5 section--title">Blog</h3>
+
+			<div class="row my-3 justify-content-center align-items-center flex-wrap ">
+				<?php
+				while ($blog->have_posts()) :
+					$blog->the_post();
+				?>
+					<article class="col-md-4 col-lg-3 my-2">
+						<div class="card">
+							<div class="card-image">
+								<?php the_post_thumbnail(); ?>
+								<div class="overlay">
+									<a href="<?php the_permalink();?>" class="btn btn--primary">Read Article</a>
+								</div>
+							</div>
+							<div class="card-details">
+								<h3><a href="<?php the_permalink();?>"><?php the_title() ?></a></h3>
+								<p><?php echo wp_trim_words( get_the_content(), 9 ) ?></p>
+								<div class="card-details-links">
+
+								</div>
+							</div>
+						</div>
+					</article>
+				<?php
+				endwhile;
+				?>
+			</div>
+			<?php
+				$posts_object = wp_count_posts('post','');
+				$posts_value_array = get_object_vars($posts_object);
+				$posts_num = $posts_value_array['publish'];
+				if($posts_num > 4 ):
+			?>
+			<div class="row justify-content-center">
+				<a href="<?php echo site_url( 'blog'); ?>" class="btn btn--primary">Show All</a>
+			</div>
+			<?php
+				endif;
+			?>
 		</div>
 	</section>
 <?php

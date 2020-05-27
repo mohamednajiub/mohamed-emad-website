@@ -1,0 +1,29 @@
+ul.post-categories,
+.post-tags{
+	padding: 0;
+	display: flex;
+	list-style-type: none;
+	flex-wrap: wrap;
+	align-items: center;
+	li{
+		padding: 0;
+		margin-left: 0;
+		margin-right: 1rem;
+	}
+	p{
+		margin-right: 0.5rem;
+	}
+	a{
+		margin-right: 0.5rem;
+		text-decoration: none;
+		color: $black;
+		font-family: 'Moon Regular';
+		font-size: 0.7rem;
+		text-transform: uppercase;
+		background-color: $white;
+		padding: 0.5rem 0.8rem;
+		cursor: pointer;
+		border: 1px solid $primary--color;
+		border-radius: 2rem;
+	}
+}
