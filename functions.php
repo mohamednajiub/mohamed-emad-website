@@ -64,30 +64,6 @@ function theme_features()
 	add_theme_support('html5', $html5_args);
 }
 
-function mohamed_najiub_metabox()
-{
-	$cmb = new_cmb2_box(array(
-		'id'           => 'job_timeline',
-		'title'        => 'Job Timeline',
-		'object_types' => array('experience'),
-		'context'      => 'advanced',
-		'priority'     => 'high'
-	));
-
-	$cmb->add_field(array(
-		'name' => 'Start date',
-		'id'   => 'mn_job_start_date',
-		'type' => 'text_date'
-	));
-
-	$cmb->add_field(array(
-		'name' => 'End Date',
-		'id'   => 'mn_job_end_date',
-		'type' => 'text_date'
-	));
-}
-add_action('cmb2_admin_init', 'mohamed_najiub_metabox');
-
 add_action("wp_enqueue_scripts", "add_styles");
 add_action("wp_enqueue_scripts", "add_scripts");
 add_action("after_setup_theme", "theme_features");

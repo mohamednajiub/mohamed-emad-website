@@ -62,3 +62,48 @@ function cmb2_portfolio_metaboxes()
 }
 
 add_action('cmb2_init', 'cmb2_portfolio_metaboxes');
+
+
+function cmb2_experiences_metaboxes()
+{
+	$experience_details = new_cmb2_box(array(
+		'id'           => 'experience_details',
+		'title'        => 'Experience Details',
+		'object_types' => array('experiences'),
+		'context'      => 'advanced',
+		'priority'     => 'high'
+	));
+
+	$experience_details->add_field(array(
+		'name' => 'Place Name',
+		'id'   => 'mn_experience_place_name',
+		'type' => 'text'
+	));
+
+	$experience_details->add_field(array(
+		'name' => 'Place URL',
+		'id'   => 'mn_experience_place_url',
+		'type' => 'text_url'
+	));
+
+	$job_time_line = new_cmb2_box(array(
+		'id'           => 'job_timeline',
+		'title'        => 'Job Timeline',
+		'object_types' => array('experiences'),
+		'context'      => 'advanced',
+		'priority'     => 'high'
+	));
+
+	$job_time_line->add_field(array(
+		'name' => 'Start date',
+		'id'   => 'mn_job_start_date',
+		'type' => 'text_date'
+	));
+
+	$job_time_line->add_field(array(
+		'name' => 'End Date',
+		'id'   => 'mn_job_end_date',
+		'type' => 'text_date'
+	));
+}
+add_action('cmb2_admin_init', 'cmb2_experiences_metaboxes');

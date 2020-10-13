@@ -32,7 +32,7 @@ function theme_post_types()
 	);
 
 	register_post_type(
-		'experience',
+		'experiences',
 		// experience custom post type Options
 		array(
 			'labels' => array(

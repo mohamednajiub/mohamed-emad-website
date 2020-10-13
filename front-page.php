@@ -52,12 +52,13 @@ wp_reset_postdata();
 ?>
 
 <?php
+
 $args = array(
-	'post_type' => 'experience',
+	'post_type' => 'experiences',
 	'post_status' => 'publish',
 	'meta_key' => 'mn_job_start_date',
 	'orderby' => 'meta_query',
-	'order' => 'ASC',
+	'order' => 'DESC',
 	'meta_query' => array(
 		array(
 			'key' => 'mn_job_start_date',
@@ -67,9 +68,13 @@ $args = array(
 	),
 	'posts_per_page' => -1
 );
+
 $experiences = new WP_Query($args);
+
+// echo '<pre>'. json_encode($experiences->get_posts(), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) .'</pre>';
 if ($experiences->have_posts()) :
 ?>
+
 	<section class="experiences my-5 py-3" id="experience">
 		<div class="container">
 			<h3 class="my-5 section--title">Things I Do</h3>
@@ -190,7 +195,7 @@ if ($portfolio->have_posts()) :
 						</div>
 					</article>
 				<?php
-				endwhile;
+					endwhile;
 				?>
 			</div>
 		</div>
