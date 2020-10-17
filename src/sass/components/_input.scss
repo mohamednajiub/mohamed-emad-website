@@ -1,0 +1,16 @@
+.input{
+	&--text-field{
+		width: 100%;
+		border-radius: 7px;
+		border: 1px solid $primary--color;
+		padding: 1rem 0.5rem;
+		outline: 0;
+	}
+	&--email-field{
+		@extend .input--text-field;
+	}
+	&--text-area{
+		margin-top: 20px;
+		@extend .input--text-field;
+	}
+}

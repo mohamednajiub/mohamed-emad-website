@@ -75,7 +75,7 @@ export const styles = () => {
 	return src(files, {
 		allowEmpty: true,
 	})
-		.pipe(changed(css_dest, { extension: '.css' }))
+		// .pipe(watch('./src/sass/**/*.scss'))
 		.pipe(
 			gulpif(
 				!production,

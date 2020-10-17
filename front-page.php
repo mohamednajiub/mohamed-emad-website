@@ -264,4 +264,12 @@ endif;
 wp_reset_postdata();
 ?>
 
+<section class="contact my-5 py-3" id="contact">
+	<div class="container">
+		<h3 class="my-5 section--title">Get in Touch</h3>
+
+		<?php echo do_shortcode('[contact-form-7 id="132" title="Contact Form"]');  ?>
+
+	</div>
+</section>
 <?php get_footer(); ?>
