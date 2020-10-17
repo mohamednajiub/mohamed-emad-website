@@ -14,7 +14,7 @@
 				</p>
 				<div class="header--footer">
 					<a href="https://mohamednajiub.me/wp-content/uploads/2020/03/Mohamed-Najiub-Resume.pdf" rel="noreferrer noopener" target="_blank" class="btn btn--primary">Resume</a>
-					<a href="#" class="btn btn--default">contact</a>
+					<a href="#contact" class="btn btn--default">contact</a>
 				</div>
 			</div>
 		</div>
